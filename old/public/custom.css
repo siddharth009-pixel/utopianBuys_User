@@ -1,0 +1,36 @@
+/* Extra small devices (phones, less than 768px) */
+
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+
+@media (max-width: 767px) {
+    
+    .cart-product-container{
+        height: 200px;
+    }
+    .extraTable{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .cart-product-container{
+        height: 200px;
+    }
+    .extraTable{
+        display: block;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    .cart-product-container{
+        height: 420px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width:1200px) {}
