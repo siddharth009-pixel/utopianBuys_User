@@ -1,0 +1,22 @@
+.login,
+.image {
+  min-height: 100vh;
+}
+
+.bg-images {
+  background-image: url('../../asset/SignUp.png');
+  background-size: cover;
+  background-position: center center;
+}
+
+.line {
+  height: 1px;
+  width: 45%;
+  background-color: #E0E0E0;
+  margin-top: 10px
+}
+
+.or {
+  width: 10%;
+  font-weight: bold
+}
