@@ -1,0 +1,89 @@
+
+
+.menuHeaderDiv{
+    width: 100%;
+}
+
+.menuHeader ul li ul{
+    z-index: 3;
+}
+
+.menuHeader{
+    height: 40px;
+    width: 100%;
+    background-color:white;
+}
+.menuHeader ul{
+    list-style: none;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+.menuHeader > ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 50px;
+    position: relative;
+}
+
+.menuHeader > ul > li > span{
+    height: 40px;
+    display: block;
+    line-height: 40px;
+    cursor: pointer;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.menuHeader>ul>li>span:hover{
+    color: #2874f0;
+}
+.menuHeader > ul > li > ul{
+    position: absolute;
+    background: white;
+    top: 40px;
+    display: none;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid grey;
+}
+.menuHeader > ul > li:hover ul{
+    display: block;
+    height: 60vh;
+}
+.menuHeader >ul >li >ul>li{
+    margin: 0 0px;
+    float: left;
+}
+.menuHeader>ul>li>ul>li>a{
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.menuHeader>ul>li>ul>li a{
+    padding: 3px 0;
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+
+.menuHeader>ul>li>ul>li>a{
+    padding: 10px 10px;
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+}
+.menuHeader>ul>li>ul>li a{
+    padding: 2px 10px;
+}
+
+.menuHeader>ul>li>ul>li{
+    padding: 10px 0px;
+}
+ 
+
+
+
+

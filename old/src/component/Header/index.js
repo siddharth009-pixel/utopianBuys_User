@@ -260,7 +260,7 @@ export default function Header(props) {
                       class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
                       data-notify="2"
                     >
-                      <i class="zmdi zmdi-shopping-cart" onClick={()=>{history.push('/cart')}}></i>
+                      <i class="zmdi zmdi-shopping-cart" onClick={()=>{props.history.push('/cart')}}></i>
                     </div>
                     <a
                       href="/"

@@ -1,0 +1,21 @@
+/* external css */
+
+
+/* for product view in product page  */
+.gallery-wrap .img-big-wrap img{
+    height:auto !important;
+    max-width: 100%;
+    object-fit: contain;
+}
+/* end */
+
+/* for product view in product list page or shop page  */
+.img-wrap img{
+    object-fit: contain !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.titleInProductListPage{
+    max-height: 50px;
+}
