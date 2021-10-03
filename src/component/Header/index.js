@@ -1,21 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import { GiHamburgerMenu } from "react-icons/gi";
-import { ImCross } from "react-icons/im";
 import './style.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { useAuth0 } from '@auth0/auth0-react'
 import { login, signOut } from '../../actions/auth.action';
-import {
-  Modal,
-  MaterialInput,
-  MaterialButton,
-  DropdownMenu
-} from '../MaterialUI';
-import 'fa-icons'
-
+import { FaCartPlus, FaFacebook, FaPinterest, FaSearch, FaUser, FaYoutube } from 'react-icons/fa';
+import { FcGoogle } from "react-icons/fc";
+import { IconContext } from "react-icons";
 import { useHistory } from 'react-router-dom';
+import car from '../../asset/images/logo.png'; // gives image path
 
 
 export default function Header(props) {
@@ -55,15 +47,13 @@ export default function Header(props) {
   return (
 
     <>
-
       <header class="section-header">
-
         <section class="header-main border-bottom">
           <div class="container">
             <div class="row align-items-center">
               <div class="col-lg-2 col-4">
                 <a href="../index.html" class="brand-wrap">
-                  <img class="logo" src="images/logo.png" />
+                <img class="logo" src={car} alt="this is car image" />
                 </a>
               </div>
               <div class="col-lg-6 col-sm-12">
@@ -72,7 +62,9 @@ export default function Header(props) {
                     <input type="text" class="form-control" placeholder="Search" />
                     <div class="input-group-append">
                       <button class="btn btn-primary" type="submit">
-                        <i class="fa fa-search"></i>
+                      <IconContext.Provider value={{ size: 20 }}>
+                            <FaSearch></FaSearch>
+                          </IconContext.Provider>
                       </button>
                     </div>
                   </div>
@@ -82,21 +74,25 @@ export default function Header(props) {
                 <div class="widgets-wrap float-md-right">
                   <div class="widget-header  mr-3">
                     <a href="#" class="icon icon-sm rounded-circle border">
-                      <i class="fa fa-shopping-cart"></i>
-                    </a>
+                    <IconContext.Provider value={{ size: 20 }}>
+                            <FaCartPlus></FaCartPlus>
+                          </IconContext.Provider></a>
                     <span class="badge badge-pill badge-danger notify">0</span>
                   </div>
                   <div class="widget-header icontext">
                     {
                       auth.authenticate ?
-                        <a href="/profile" class="icon icon-sm rounded-circle border"><i class="fa fa-user"></i></a> :
+                        <a href="/profile" class="icon icon-sm rounded-circle border">
+                          <IconContext.Provider value={{ size: 20 }}>
+                            <FaUser></FaUser>
+                          </IconContext.Provider></a> :
                         <a href="/login" class="icon icon-sm rounded-circle border"><i class="fa fa-user"></i></a>
                     }
                     <div class="text">
-                      <span style={{cursor: 'pointer'}} class="text-muted">Welcome!</span>
+                      <span style={{ cursor: 'pointer' }} class="text-muted">Welcome!</span>
                       <div>{
                         auth.authenticate ?
-                          <a href="/profile" >{auth.user.firstname}</a> 
+                          <a href="/profile" >{auth.user.firstname}</a>
                           :
                           <>
                             <a href="/login">Sign in</a> |
@@ -111,10 +107,47 @@ export default function Header(props) {
             </div>
           </div>
         </section>
+        <nav class="navbar navbar-expand-lg navbar-main border-bottom">
+          <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav7" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main_nav7">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link pl-0" href="#"> <strong>All category</strong></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Fashion</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Supermarket</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Electronics</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Baby &amp; Toys</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Fitness sport</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="http://example.com/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Foods and Drink</a>
+                    <a class="dropdown-item" href="#">Home interior</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Category 1</a>
+                    <a class="dropdown-item" href="#">Category 2</a>
+                    <a class="dropdown-item" href="#">Category 3</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </header>
-
-
-
     </>
   )
 }

@@ -50,6 +50,26 @@ export const userReducer=(state=initState,action)=>{
                 error:action.payload.error
             }
         }
+        case userConstants.DELETE_USER_ADDRESS_REQUEST:{
+            return {
+                ...state,
+                loading:true
+            }
+        }
+        case userConstants.DELETE_USER_ADDRESS_SUCCESS:{
+            return{
+                ...state,
+                loading:false,
+                address:action.payload.address
+            }
+        }
+        case userConstants.DELETE_USER_ADDRESS_FAILED:{
+            return{
+                ...state,
+                loading:false,
+                error:action.payload.error
+            }
+        }
         case userConstants.ADD_USER_ORDER_SUCCESS:{
             return{
                 ...state,

@@ -7,13 +7,16 @@ const initState = {
         lastname: '',
         email: '',
         picture: '',
-        role: ''
+        contactNumber: '',
+        role: '',
+        gender:''
     },
     creatingUser: false,
     createdUser: false,
     authenticate: false,
     authenticating: false,
     loading: false,
+    profileLoading: false,
     error: ''
 }
 
@@ -55,24 +58,51 @@ export const authReducer = (state = initState, action) => {
                 loading: false,
                 error: action.payload
             }
-        case authConstants.SIGNUP_REQUEST:{
+        case authConstants.SIGNUP_REQUEST: {
             return {
                 ...state,
-                creatingUser:true
+                creatingUser: true
             }
         }
-        case authConstants.SIGNUP_SUCCESS:{
+        case authConstants.SIGNUP_SUCCESS: {
             return {
                 ...state,
-                creatingUser:false,
-                createdUser:true
+                creatingUser: false,
+                createdUser: true
             }
         }
-        case authConstants.SIGNUP_FAILED:{
+        case authConstants.SIGNUP_FAILED: {
             return {
                 ...state,
-                creatingUser:false,
-                createdUser:false,    
+                creatingUser: false,
+                createdUser: false,
+                error: action.payload.error
+            }
+        }
+        case authConstants.PROFILE_UPDATE_REQUEST: {
+            return {
+                ...state,
+                profileLoading: true
+            }
+        }
+        case authConstants.PROFILE_UPDATE_SUCCESS: {
+            const newUser=action.payload.user
+            return {
+                ...state,
+                profileLoading: false,
+                user:{
+                    firstname:newUser.firstname,
+                    lastname:newUser.lastname,
+                    gender: newUser.gender,
+                    contactNumber:newUser.contactNumber,
+                    email:newUser.email,
+                }
+            }
+        }
+        case authConstants.PROFILE_UPDATE_FAILED: {
+            return {
+                ...state,
+                profileLoading:false,
                 error:action.payload.error
             }
         }

@@ -68,7 +68,7 @@ export default function Login(props) {
                       <div className="custom-control custom-checkbox mb-3">
                         <input id="customCheck1" type="checkbox" checked className="custom-control-input" />
                         <label for="customCheck1" className="custom-control-label">Remember password</label>
-                        <a for="customCheck1" onClick={() => { }} href="/login" className="custom-control-label px-4">Forgot password?</a>
+                        <a  onClick={() => { }} href="/login" className="px-5">Forgot password?</a>
                       </div>
                       <div className="custom-control custom-checkbox mb-3">
                         <button
