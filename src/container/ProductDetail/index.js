@@ -221,7 +221,8 @@ export default function ProductDetail(props) {
                             <aside class="col-md-6">
                                 <article class="gallery-wrap">
                                     <div class="img-big-wrap">
-                                        <a href="#"><img src={pic.length == '' ? productPictures[0].img : pic} /></a>
+                                        {/* <a href="#"><img src={pic.length == '' ? productPictures[0].img : pic} /></a> */}
+                                        <a onClick={(e)=>{e.preventDefault();}} ><img src={pic.length == '' ? localImageToLocalTunnelImage(productPictures[0].img) :localImageToLocalTunnelImage(pic)} /></a>
                                     </div>
                                     <div class="thumbs-wrap">
                                         {productPictures &&

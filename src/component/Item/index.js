@@ -10,7 +10,7 @@ import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function Item(props) {
 
-    const history=useHistory();
+    const history = useHistory();
     const { name, price, image, slug, _id, productDetails } = props
     // const [proDetailsModal, setProDetailsModal] = useState(false)
     const dispatch = useDispatch()
@@ -24,7 +24,7 @@ export default function Item(props) {
         // const { _id, name, price } = product.productDetails;
         // const img = product.productDetails.productPictures[0].img;
         console.log({ _id, name, price, image })
-        dispatch(addToCart({ _id, name, price, img:image }))
+        dispatch(addToCart({ _id, name, price, img: image }))
         history.push('/cart')
     }
 
@@ -40,7 +40,8 @@ export default function Item(props) {
             <figure class="card card-product-grid">
                 <div class="img-wrap">
                     {/* <span class="badge badge-danger"> NEW </span> */}
-                    <img src={image} alt='product image' />
+                    <Link to={`/${slug}/${_id}/p`} > <img src={image} alt='product image' />
+                    </Link>
                     {/* <a class="btn-overlay" onClick={(e) => {
                         tempFunction();
                         dispatch(addProductModalAction({ productDetails: productDetails }));
@@ -53,7 +54,7 @@ export default function Item(props) {
                         <Link to={`/${slug}/${_id}/p`} class="title" >{name}</Link>
                         <div class="price-wrap mt-2">
                             <span class="price"><i class="fa fa-inr"></i> {price}</span>
-                            <del class="price-old"> <i class="fa fa-inr"></i> {price-200}</del>
+                            <del class="price-old"> <i class="fa fa-inr"></i> {price - 200}</del>
                         </div>
                     </div>
                     <a onClick={(e) => { e.preventDefault(); addToCartButton() }} class="btn btn-block btn-primary">Add to cart </a>
