@@ -1,7 +1,9 @@
 import { cartConstants } from "../actions/constants"
 
 const initState={
-    cartItems:{}
+    cartItems:{},
+    loading:false,
+    error:{}
 }
 
 export const cartReducer=(state=initState,action)=>{
@@ -16,6 +18,26 @@ export const cartReducer=(state=initState,action)=>{
             return {
                 ...state,
                 cartItems:{}
+            }
+        }
+        case cartConstants.REMOVE_ITEM_FROM_CART_REQUEST:{
+            return {
+                ...state,
+                loading: true
+            }
+        }
+        case cartConstants.REMOVE_ITEM_FROM_CART_SUCCESS:{
+            return{
+                ...state,
+                loading:false,
+                cartItems:action.payload.cartItems
+            }
+        }
+        case cartConstants.REMOVE_ITEM_FROM_CART_FAILED:{
+            return {
+                ...state,
+                loading:false,
+                error:action.payload.error
             }
         }
         default:{

@@ -39,6 +39,7 @@ export const addToCart = (product, newQty = 1) => {
     }
 }
 
+
 const getCartItems = () => {
     return async (dispatch) => {
         const res = await axios.get('/user/cart/getcartitems')
@@ -93,6 +94,32 @@ export const resetCart = () => {
             type: cartConstants.RESET_CART
         })
     }
+}
+
+export const removeItemFromCart = (productId) => {
+    return async (dispatch) => {
+
+        const payload = { productId: productId }
+        dispatch({ type: cartConstants.REMOVE_ITEM_FROM_CART_REQUEST })
+        
+        const res = await axios.post('/user/cart/removecartitem', { payload })
+        console.log(res.data.cartItems)
+        if (res.status == 201) {
+            const { cartItems } = res.data
+            dispatch({
+                type: cartConstants.REMOVE_ITEM_FROM_CART_SUCCESS,
+                payload: { cartItems: cartItems }
+            })
+        }
+        if (res.status == 400) {
+            dispatch({
+                type: cartConstants.REMOVE_ITEM_FROM_CART_FAILED,
+                payload: { error: res.data.error }
+            })
+        }
+
+    }
+
 }
 
 export { getCartItems }

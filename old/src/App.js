@@ -45,9 +45,9 @@ function App() {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/temp" component={TempPage} />
-          <Route path="/login" component={login}/>
+          {/* <Route path="/login" component={login}/>
           <Route path="/signup" component={signUp} />
-          <Route path="/profile" component={profile} />
+          <Route path="/profile" component={profile} /> */}
           <Route path="/blog" component={BlogPage} />
           <Route path="/about" component={AboutPage} />
           <Route path="/cart" component={Cart} />

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import { generatePublicUrl } from '../../urlConfig'
 import { getProductDetailsById } from '../../actions/product.action'
 import { addToCart } from '../../actions/cart.action'
-
+import { FaCartArrowDown } from 'react-icons/fa';
 
 
 export default function ProductDetail(props) {
@@ -52,6 +52,9 @@ export default function ProductDetail(props) {
 
 
     const funct1 = () => {
+
+        console.log('hooo')
+
         return (
             <>
                 <div class="bor10 m-t-50 p-t-43 p-b-40">
@@ -209,180 +212,125 @@ export default function ProductDetail(props) {
 
     return (
 
+        <Layout>
+            <section class="section-content padding-y bg">
 
-        <div>
-            <Layout>
-
-                {/* Header */}
                 <div class="container">
-                    <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
-                        <Link to="/" class="stext-109 cl8 hov-cl1 trans-04">
-                            Home
-                            <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
-                        </Link>
-                        <Link to="/shop" class="stext-109 cl8 hov-cl1 trans-04">
-                            Men
-                            <i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
-                        </Link>
-                        <span class="stext-109 cl4">
-                            Lightweight Jacket
-                        </span>
-                    </div>
-                </div>
-                {/* Header */}
-                {/* Product Details */}
-                <section class="sec-product-detail bg0 p-t-65 p-b-60">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6 col-lg-7 p-b-30">
-                                <div class="p-l-25 p-r-30 p-lr-0-lg">
-                                    <div class="wrap-slick3 flex-sb flex-w">
-                                        <div class="wrap-slick3-dots">
-                                            {productPictures &&
-                                                productPictures.map(picture => {
-                                                    return (
-                                                        <>
-                                                            <div class="item-slick3" data-thumb="images/product-detail-02.jpg"
-                                                                style={{ marginBottom: '10px' }}>
-                                                                <div class="wrap-pic-w pos-relative">
-                                                                    <img style={{ cursor: 'pointer' }} onClick={(e) => { setPic(picture.img) }} src={generatePublicUrl(picture.img)} alt="IMG-PRODUCT" />
 
-                                                                </div>
-                                                            </div>
-                                                        </>
-                                                    )
-                                                })
-                                            }
-                                            {/* <div class="item-slick3" data-thumb="images/product-detail-02.jpg"
-                                                style={{ marginBottom: '10px' }}>
-                                                <div class="wrap-pic-w pos-relative">
-                                                    <img src="images/product-detail-02.jpg" alt="IMG-PRODUCT" />
-                                                    <a class="flex-c-m  how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-02.jpg">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            */}
 
-                                        </div>
-                                        <div class="slick3 gallery-lb">
-                                            <div class="item-slick3" data-thumb="images/product-detail-01.jpg">
-                                                <div class="wrap-pic-w pos-relative">
-                                                    <img src={generatePublicUrl(pic.length == '' ? productPictures[0].img : pic)} alt="IMG-PRODUCT" />
-                                                    <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href={generatePublicUrl(pic.length == '' ? productPictures[0].img : pic)}>
-                                                        <i class="fa fa-expand"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                        </div>
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <aside class="col-md-6">
+                                <article class="gallery-wrap">
+                                    <div class="img-big-wrap">
+                                        <a href="#"><img src={pic.length == '' ? productPictures[0].img : pic} /></a>
                                     </div>
-                                </div>
-                            </div>
+                                    <div class="thumbs-wrap">
+                                        {productPictures &&
+                                            productPictures.map(picture => {
+                                                return (
+                                                    <>
+                                                        <a href="#" class="item-thumb">
+                                                            <img src={picture.img} style={{ cursor: 'pointer' }} onClick={(e) => { setPic(picture.img) }} alt="IMG-PRODUCT" /> </a>
+                                                    </>
+                                                )
+                                            })
+                                        }
+                                    </div>
+                                </article>
+                            </aside>
+                            <main class="col-md-6 border-left">
+                                <article class="content-body">
 
-                            <div class="col-md-6 col-lg-5 p-b-30">
-                                <div class="p-r-50 p-t-5 p-lr-0-lg">
-                                    <h4 class="mtext-105 cl2 js-name-detail p-b-14">
-                                        {name}
-                                    </h4>
-                                    <span class="mtext-106 cl2"> $58.79 </span>
-                                    <p class="stext-102 cl3 p-t-23">
-                                        {description}
-                                    </p>
+                                    <h2 class="title">{name}</h2>
 
-                                    <div class="p-t-33">
-                                        <div class="flex-w flex-r-m p-b-10">
-                                            <div class="size-203 flex-c-m respon6">Size</div>
-                                            <div class="size-204 respon6-next">
-                                                <div class="rs1-select2 bor8 bg0">
-                                                    <div class="dropDownSelect2">
-                                                        <select class="js-select2 select2-hidden-accessible" name="time" tabindex="-1">
-                                                            <option>Choose an option</option>
-                                                            <option>Size S</option>
-                                                            <option>Size M</option>
-                                                            <option>Size L</option>
-                                                            <option>Size XL</option>
-                                                        </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" style={{ width: '141.2px' }}><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-time-cm-container"><span class="select2-selection__rendered" id="select2-time-cm-container" title="Size S">Size S</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-w flex-r-m p-b-10">
-                                            <div class="size-203 flex-c-m respon6">Color</div>
-                                            <div class="size-204 respon6-next">
-                                                <div class="rs1-select2 bor8 bg0">
-                                                    <select class="js-select2 select2-hidden-accessible" name="time" tabindex="-1" aria-hidden="true">
-                                                        <option>Choose an option</option>
-                                                        <option>Red</option>
-                                                        <option>Blue</option>
-                                                        <option>White</option>
-                                                        <option>Grey</option>
-                                                    </select><span class="select2 select2-container select2-container--default select2-container--below select2-container--focus" dir="ltr" style={{ width: '141.2px' }}><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-time-lq-container"><span class="select2-selection__rendered" id="select2-time-lq-container" title="Red">Red</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                                    <div class="dropDownSelect2"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-w flex-r-m p-b-10">
-                                            <div class="size-203 flex-c-m respon6">Quantity</div>
-                                            <div class="size-204 flex-w flex-m respon6-next">
-                                                <div class="wrap-num-product flex-w m-r-20 m-tb-10">
-                                                    <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-                                                        <i class="fs-16 zmdi zmdi-minus"></i>
-                                                    </div>
-                                                    <input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1" />
-                                                    <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-                                                        <i class="fs-16 zmdi zmdi-plus"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-w" style={{ justifyContent: 'space-evenly' }}>
-                                            <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail"
-                                                onClick={addToCartButton}
-                                            >
-                                                Add to cart
-                                            </button>
-
-                                            <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
-                                                Buy Now
-                                            </button>
-                                        </div>
+                                    <div class="rating-wrap my-3">
+                                        <ul class="rating-stars">
+                                            <li style={{ width: '80%' }} class="stars-active">
+                                                <img src="bootstrap-ecommerce-html/images/icons/stars-active.svg" alt="" />
+                                            </li>
+                                            <li>
+                                                <img src="bootstrap-ecommerce-html/images/icons/starts-disable.svg" alt="" />
+                                            </li>
+                                        </ul>
+                                        <small class="label-rating text-muted">132 reviews</small>
+                                        <small class="label-rating text-success"> <i class="fa fa-clipboard-check"></i> 154
+                                            orders </small>
                                     </div>
 
-                                    <div class="flex-w flex-m p-l-100 p-t-40 respon7">
-                                        <div class="flex-m bor9 p-r-10 m-r-11">
-                                            <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100" data-tooltip="Add to Wishlist">
-                                                <i class="zmdi zmdi-favorite"></i>
-                                            </a>
-                                        </div>
-                                        <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
-                                            <i class="fa fa-facebook"></i>
-                                        </a>
-                                        <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                        <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
-                                            <i class="fa fa-google-plus"></i>
-                                        </a>
+                                    <div class="mb-3">
+                                        <var class="price h4">{price}</var>
+                                        <span class="text-muted"></span>
                                     </div>
-                                </div>
-                            </div>
+
+                                    <p>Virgil Abloh’s Off-White is a streetwear-inspired collection that continues to break away
+                                        from the conventions of mainstream fashion. Made in Italy, these black and brown
+                                        Odsy-1000 low-top sneakers.</p>
+
+                                    <dl class="row">
+                                        <dt class="col-sm-3">Model#</dt>
+                                        <dd class="col-sm-9">Odsy-1000</dd>
+
+                                        <dt class="col-sm-3">Color</dt>
+                                        <dd class="col-sm-9">Brown</dd>
+
+                                        <dt class="col-sm-3">Delivery</dt>
+                                        <dd class="col-sm-9">Russia, USA, and Europe </dd>
+                                    </dl>
+
+                                    <hr />
+                                    <div class="row">
+                                        <div class="form-group col-md flex-grow-0">
+                                            <label>Quantity</label>
+                                            <div class="input-group mb-3 input-spinner">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-light" type="button" id="button-plus"> + </button>
+                                                </div>
+                                                <input type="text" class="form-control" value="1" />
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-light" type="button" id="button-minus"> − </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md">
+                                            <label>Select size</label>
+                                            <div class="mt-2">
+                                                <label class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" name="select_size" checked=""
+                                                        class="custom-control-input" />
+                                                    <div class="custom-control-label">Small</div>
+                                                </label>
+
+                                                <label class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" name="select_size" class="custom-control-input" />
+                                                    <div class="custom-control-label">Medium</div>
+                                                </label>
+
+                                                <label class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" name="select_size" class="custom-control-input" />
+                                                    <div class="custom-control-label">Large</div>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {/* <a href="#" class="btn  btn-primary"> Buy now </a> */}
+                                    <a class="btn rounded-pill" style={{backgroundColor:'rgb(113,127,224)'}}> <FaCartArrowDown /> <span class="text" style={{color:"white"}} onClick={(e) => { e.preventDefault(); addToCartButton() }}>Add to cart</span> </a>
+                                </article>
+                            </main>
                         </div>
-                        {
-                            funct1()
-                        }
                     </div>
-                    <div class="bg6 flex-c-m flex-w size-302 m-t-73 p-tb-15">
-                        <span class="stext-107 cl6 p-lr-25">
-                            SKU: JAK-01
-                        </span>
-                        <span class="stext-107 cl6 p-lr-25">
-                            Categories: Jacket, Men
-                        </span>
-                    </div>
-                </section>
-                {/* Product Details */}
-                <Footer></Footer>
-            </Layout>
-        </div>
+
+
+
+                </div>
+
+
+
+            </section>
+
+        </Layout>
+
+
     )
 }

@@ -14,6 +14,7 @@ import {
   Login,
   Signup,
   Profile,
+  Checkout
 } from './container/index';
 
 import { getInitialData } from './actions/initialData.action';
@@ -51,6 +52,7 @@ function App() {
           <Route path="/blog" component={BlogPage} />
           <Route path="/about" component={AboutPage} />
           <Route path="/cart" component={Cart} />
+          <Route path="/checkout" component={Checkout} />
           <Route path="/order" component={OrderPage} />
           <Route path="/contact" component={ContactPage} />
           <Route path="/blogdetail" component={BlogDetail} />

@@ -1,31 +1,25 @@
-/* 
-
-.menuHeaderDiv{
-    width: 100%;
-}
-
-.menuHeader ul li ul{
-    z-index: 3;
-}
 
 .menuHeader{
+    top:56px;
+    position: sticky;
     height: 40px;
     width: 100%;
-    background-color:white;
+    background-color: white;
+    border-bottom: 1px solid #cecece ;
+    box-shadow: 0px 2px 2px -2px #cecece;
 }
 .menuHeader ul{
     list-style: none;
-    height: 100%;
     margin: 0%;
     padding: 0%;
+    width: 100%;
 }
 .menuHeader > ul{
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 50px;
+    margin: 0 0;
     position: relative;
+    width: fit-content;
 }
-
 .menuHeader > ul > li > span{
     height: 40px;
     display: block;
@@ -40,16 +34,22 @@
 }
 .menuHeader > ul > li > ul{
     position: absolute;
-    background: white;
+    background: rgb(255, 255, 255);
     top: 40px;
     display: none;
     left: 0;
     right: 0;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #cecece;
 }
 .menuHeader > ul > li:hover ul{
     display: block;
-    height: 60vh;
+    background: rgb(255,255,255);
+    z-index: 500 !important;
+}
+
+.menuHeader > ul > li:hover .subCatUl{
+    display: block;
+    z-index: 500 !important;
 }
 .menuHeader >ul >li >ul>li{
     margin: 0 0px;
@@ -82,66 +82,62 @@
 .menuHeader>ul>li>ul>li{
     padding: 10px 0px;
 }
- 
-
-
-
- */
-
-
-
-
-
-
- 
-.headerDiv ul {
-    list-style: none;
-}
-
-ul.mainCatUl {
-    display: flex;
-    position: relative;
-}
-
-.nav-item {
-    display: block;
-}
-
-ul.mainCatUl {
-    margin: 0;
-    height: 100%;
-}
-
-li.mainCatLi {
-    height: 100%;
-}
 
 .subCatUl {
-    display: none;
-}
-
-ul.mainCatUl>li:hover ul.subCatUl {
-    display: flex;
     z-index: 3;
-    position: absolute;
-    background-color: white;
-    width: 70vw;
-    padding: 15px;
-    left: 0;
-    background-color: #d1cdd3;
-    box-shadow: 1px 1px 10px 1px black;
 }
 
-ul.subCatUl li div {
-    padding: 5px 20px;
-}
 
-ul.subCatUl li div a {
+
+
+
+
+
+
+/* .menuHeader > ul > li > ul > li > a {
     display: block;
-    padding: 5px;
-    font-weight: bolder;
+    padding: 3px 0;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.catbarContainer {
-    height: 100%;
+
+
+.menuHeader > ul > li:hover >ul{
+border: 1px solid #333;
+box-shadow: 0px 2px 2px -2px #333;
 }
+
+.menuHeader > ul > li{
+    display: block;
+    height: 40px;
+    padding-left:20px;
+    padding-right:20px;
+    position: relative;
+}
+.menuHeader > ul > li > a{
+    text-align: center;
+    justify-content: center;
+}
+
+.menuHeader > ul > li:hover a{
+    color: blue;
+}
+
+.menuHeader > ul > li > ul > li {
+    float: left;
+    min-width: 150px;
+}
+
+
+.menuHeader > ul > li > ul > li a {
+    display: block;
+    font-weight: bold;
+}
+
+.menuHeader > ul > li > ul > li >span {
+    display: block;
+    font-weight: bold;
+}
+ */

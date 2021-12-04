@@ -7,24 +7,25 @@ import ProductPage from "./ProductPage"
 import ProductStore from "./ProductStore"
 import './style.css'
 
-const items = [
-    { name: 'Esprit Ruffle Shirt', type: "Mandala", price: '35', image: "images/product-01.jpg" },
-    { name: 'Esprit Ruffle Shirt', type: "Mandala", price: '35', image: "images/product-02.jpg" },
-    { name: 'Esprit Ruffle Shirt', type: "men", price: '35', image: "images/product-03.jpg" },
-    { name: 'Esprit Ruffle Shirt', type: "Mandala", price: '35', image: "images/product-04.jpg" },
-    { name: 'Esprit Ruffle Shirt', type: "men", price: '35', image: "images/product-05.jpg" },
-    { name: 'Esprit Ruffle Shirt', type: "watch", price: '35', image: "images/product-06.jpg" },
-    { name: 'Esprit Ruffle Shirt', type: "Mandala", price: '35', image: "images/product-07.jpg" },
-    { name: 'Esprit Ruffle Shirt', type: "Mandala", price: '35', image: "images/product-08.jpg" },
-    { name: 'Esprit Ruffle Shirt', type: "men", price: '35', image: "images/product-09.jpg" },
-    { name: 'Esprit Ruffle Shirt', type: "men", price: '35', image: "images/product-10.jpg" },
-    { name: 'Esprit Ruffle Shirt', type: "men", price: '35', image: "images/product-11.jpg" },
-    { name: 'Esprit Ruffle Shirt', type: "men", price: '35', image: "images/product-12.jpg" },
-    { name: 'Esprit Ruffle Shirt', type: "men", price: '35', image: "images/product-13.jpg" },
-    { name: 'Esprit Ruffle Shirt', type: "men", price: '35', image: "images/product-14.jpg" },
-    { name: 'Esprit Ruffle Shirt', type: "Mandala", price: '35', image: "images/product-15.jpg" },
-    { name: 'Esprit Ruffle Shirt', type: "Mandala", price: '35', image: "images/product-16.jpg" },
-]
+// const items = [
+//     { name: 'Esprit Ruffle Shirt', type: "Mandala", price: '35', image: "images/product-01.jpg" },
+//     { name: 'Esprit Ruffle Shirt', type: "Mandala", price: '35', image: "images/product-02.jpg" },
+//     { name: 'Esprit Ruffle Shirt', type: "men", price: '35', image: "images/product-03.jpg" },
+//     { name: 'Esprit Ruffle Shirt', type: "Mandala", price: '35', image: "images/product-04.jpg" },
+//     { name: 'Esprit Ruffle Shirt', type: "men", price: '35', image: "images/product-05.jpg" },
+//     { name: 'Esprit Ruffle Shirt', type: "watch", price: '35', image: "images/product-06.jpg" },
+//     { name: 'Esprit Ruffle Shirt', type: "Mandala", price: '35', image: "images/product-07.jpg" },
+//     { name: 'Esprit Ruffle Shirt', type: "Mandala", price: '35', image: "images/product-08.jpg" },
+//     { name: 'Esprit Ruffle Shirt', type: "men", price: '35', image: "images/product-09.jpg" },
+//     { name: 'Esprit Ruffle Shirt', type: "men", price: '35', image: "images/product-10.jpg" },
+//     { name: 'Esprit Ruffle Shirt', type: "men", price: '35', image: "images/product-11.jpg" },
+//     { name: 'Esprit Ruffle Shirt', type: "men", price: '35', image: "images/product-12.jpg" },
+//     { name: 'Esprit Ruffle Shirt', type: "men", price: '35', image: "images/product-13.jpg" },
+//     { name: 'Esprit Ruffle Shirt', type: "men", price: '35', image: "images/product-14.jpg" },
+//     { name: 'Esprit Ruffle Shirt', type: "Mandala", price: '35', image: "images/product-15.jpg" },
+//     { name: 'Esprit Ruffle Shirt', type: "Mandala", price: '35', image: "images/product-16.jpg" },
+// ]
+
 export default function ShopPage(props) {
 
 
@@ -45,11 +46,26 @@ export default function ShopPage(props) {
                 break ;
             }
             default:{
-                content=""
+                content = <ProductStore {...props} />
+                break ;
             }
         }
         return content
     }
+
+    // switch (type) {
+    //     case 'store': {
+    //         content = <ProductStore {...props} />
+    //         break ;
+    //     }
+    //     case 'page':{
+    //         content =  <ProductPage {...props} />
+    //         break ;
+    //     }
+    //     default:{
+    //         content=""
+    //     }
+    // }
 
 
 
@@ -58,9 +74,7 @@ export default function ShopPage(props) {
         <>
             <Layout>
                 <div class="menuHeaderDiv">
-                    <div >
-                        <MenuHeader />
-                    </div>
+               
 
                     <div>
                         {

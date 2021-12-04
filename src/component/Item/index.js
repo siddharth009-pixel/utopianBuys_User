@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import ProductDetailsModal from '../ProductDetailsModal';
-import {addProductModalAction} from '../../actions/productModal.action'
+import { addProductModalAction } from '../../actions/productModal.action'
 import './style.css'
+import { addToCart } from '../../actions/cart.action';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 export default function Item(props) {
 
-    const { name, price, image, slug, _id,productDetails } = props
+    const history=useHistory();
+    const { name, price, image, slug, _id, productDetails } = props
     // const [proDetailsModal, setProDetailsModal] = useState(false)
     const dispatch = useDispatch()
 
@@ -17,10 +20,13 @@ export default function Item(props) {
         console.log(e);
     }
 
-
-    // const onSubmit = () => {
-
-    // }
+    const addToCartButton = () => {
+        // const { _id, name, price } = product.productDetails;
+        // const img = product.productDetails.productPictures[0].img;
+        console.log({ _id, name, price, image })
+        dispatch(addToCart({ _id, name, price, img:image }))
+        history.push('/cart')
+    }
 
 
     const tempFunction = () => {
@@ -30,7 +36,33 @@ export default function Item(props) {
     return (
         <>
 
-            <div style={{ height: '100%', width: '100%' }}
+
+            <figure class="card card-product-grid">
+                <div class="img-wrap">
+                    {/* <span class="badge badge-danger"> NEW </span> */}
+                    <img src={image} alt='product image' />
+                    {/* <a class="btn-overlay" onClick={(e) => {
+                        tempFunction();
+                        dispatch(addProductModalAction({ productDetails: productDetails }));
+                        // setProDetailsModal(true)
+                        handlesubmit(e)
+                    }}><i class="fa fa-search-plus"></i> Quick view</a> */}
+                </div>
+                <figcaption class="info-wrap">
+                    <div class="fix-height">
+                        <Link to={`/${slug}/${_id}/p`} class="title" >{name}</Link>
+                        <div class="price-wrap mt-2">
+                            <span class="price"><i class="fa fa-inr"></i> {price}</span>
+                            <del class="price-old"> <i class="fa fa-inr"></i> {price-200}</del>
+                        </div>
+                    </div>
+                    <a onClick={(e) => { e.preventDefault(); addToCartButton() }} class="btn btn-block btn-primary">Add to cart </a>
+                </figcaption>
+            </figure>
+
+
+
+            {/* <div style={{ height: '100%', width: '100%' }}
             >
                 <div class="block2" style={{ height: '100%', width: '100%' }}>
                     <div class="block2-pic hov-img0">
@@ -42,7 +74,7 @@ export default function Item(props) {
                         <button
                             onClick={(e) => {
                                 tempFunction();
-                                dispatch(addProductModalAction({productDetails:productDetails}));
+                                dispatch(addProductModalAction({ productDetails: productDetails }));
                                 // setProDetailsModal(true)
                                 handlesubmit(e)
                             }}
@@ -85,7 +117,7 @@ export default function Item(props) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* <ProductDetailsModal show={proDetailsModal}
                 handleClose={() => { setProDetailsModal(false) }}

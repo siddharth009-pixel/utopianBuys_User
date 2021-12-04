@@ -5,7 +5,7 @@ import { IconContext } from "react-icons";
 export default function index() {
     return (
         <div>
-            <section class="section-content padding-y-sm">
+            <section class="section-content padding-y-sm d-none d-md-block">
                 <div class="container">
                     <article class=" card-body">
                         <div class="row">

@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 
-export const AddressForm = (props) => {
+export default function AddressForm(props) {
 
     const initalData = props.initalData;
     const onSubmit = props.onSubmit;
-    const onCancel=props.onCancel;
+    const onCancel = props.onCancel;
     const onSubmitFormAndDeliever = props.onSubmitFormAndDeliever;
     const [name, setName] = useState(initalData ? initalData.name : "");
     const [mobileNumber, setMobileNumber] = useState(
@@ -45,7 +45,7 @@ export const AddressForm = (props) => {
                     state,
                     landmark,
                     alternatePhone,
-                    addressType: addressType==""?'home':addressType,
+                    addressType: addressType == "" ? 'home' : addressType,
                 },
             };
         } else {

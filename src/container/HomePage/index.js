@@ -24,12 +24,7 @@ export default function index() {
                 <CategorySection title="Product"
                 product={items}
                 ></CategorySection>
-                <CategorySection title="Product"
-                product={items}
-                ></CategorySection>
-                <CategorySection title="Product"
-                product={items}
-                ></CategorySection>
+                
                 <Footer></Footer>
             </Layout>
         </div>

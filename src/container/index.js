@@ -11,7 +11,7 @@ import TempPage from './TempPage/index';
 import Login from './Login/index';
 import Signup from './SignUp/index';
 import  Profile from './Profile/Profile';
-
+import Checkout from './Checkout/index';
 
 
 
@@ -28,5 +28,6 @@ export  {
     TempPage,
     Login,
     Signup,
-    Profile
+    Profile,
+    Checkout
 }
