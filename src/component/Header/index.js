@@ -119,7 +119,7 @@ function Header(props, ref) {
                           <Link to='/profile'>{auth.user.firstname}</Link>
                           :
                           <>
-                            <Link to='/login'>Sign in</Link> |
+                            <Link to='/login'>Signin</Link> |
                             <Link to='/signup'> Register</Link>
                             {/* <a onClick={(e) => { e.preventDefault(); props.history.push('/login') }}>Sign in</a> | */}
                             {/* <a onClick={(e) => { e.preventDefault(); props.history.push('/signup') }}> Register</a> */}
