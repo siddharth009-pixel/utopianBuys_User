@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { generatePublicUrl } from "../../../urlConfig";
+import { generatePublicUrl, localImageToLocalTunnelImage } from "../../../urlConfig";
 import { useDispatch, useSelector } from 'react-redux';
 import { removeItemFromCart } from "../../../actions/cart.action";
 
@@ -44,7 +44,7 @@ export const CartItem = (props) => {
                                 <div class="row">
                                     <div class="column-1 col col-5 col-md-4" style={{ height: '120px',margin:'auto' }}>
                                         <div class="how-itemcart1" style={{ height: '120px',margin:'auto' }}>
-                                            <div style={{ height: '120px' }}><img src={img} alt="IMG"
+                                            <div style={{ height: '120px' }}><img src={localImageToLocalTunnelImage(img)} alt="IMG"
                                                 style={{ objectFit: 'cover', maxWidth: '100%', height: '120px',margin: 'auto'}} />
                                             </div>
                                         </div>
