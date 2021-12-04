@@ -66,9 +66,9 @@ function Header(props, ref) {
 
             <div class="row align-items-center" >
 
-              <div class="col-md-2 order-1 order-md-1 col-4">
+              <div class="col-md-2 order-1 order-md-1 col-3">
                 <Link to='/'>
-                  <img class="logo" src={car} alt="this is car image" />
+                  <img class="logo" src={car} alt="this is image" />
                 </Link>
               </div>
 
@@ -87,7 +87,7 @@ function Header(props, ref) {
                 </form>
               </div>
 
-              <div class="col-md-4 order-2 order-md-3 col-sm-6 ml-auto col-7">
+              <div class="col-md-4 order-2 order-md-3 col-sm-6 ml-auto col-9">
                 <div class="widgets-wrap ml-auto">
                   <div class="widget-header ml-auto  mr-3">
                     <Link to="/cart" class="icon icon-sm rounded-circle border">

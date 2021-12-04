@@ -3,7 +3,7 @@ import { useEffect } from "react"
 import { NavLink } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
 import { getProductsBySlug } from "../../../actions/product.action"
-import { generatePublicUrl } from "../../../urlConfig"
+import { generatePublicUrl, localImageToLocalTunnelImage } from "../../../urlConfig"
 import './style.css'
 import { Link } from "react-router-dom"
 import Item from '../../../component/Item'
@@ -274,7 +274,7 @@ const ProductStore = (props) => {
 																	quantity: product.quantity
 																}}
 																history={props.history}
-																image={generatePublicUrl(product.productPictures[0].img)}
+																image={localImageToLocalTunnelImage(product.productPictures[0].img)}
 															></Item>
 														</div>
 													</div>

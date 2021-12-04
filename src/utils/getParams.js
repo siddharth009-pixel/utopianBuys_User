@@ -14,4 +14,12 @@ export const getParams = (query) => {
     return {}
 }
 
+// export const localImageToLocalTunnelImage = (localLink) => {
+//     if (localLink) {
+//         const myArray = text.split("http://localhost:2000/public")[1];
+//         letLocalTunnelLink='localtunnel link'+myArray;
+//     }
+// }
+
+
 export default getParams

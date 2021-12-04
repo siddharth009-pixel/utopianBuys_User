@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Layout from '../../component/Layout'
 import Footer from '../../component/Footer'
 import { Link } from 'react-router-dom'
-import { generatePublicUrl } from '../../urlConfig'
+import { generatePublicUrl, localImageToLocalTunnelImage } from '../../urlConfig'
 import { getProductDetailsById } from '../../actions/product.action'
 import { addToCart } from '../../actions/cart.action'
 import { FaCartArrowDown } from 'react-icons/fa';
@@ -52,8 +52,6 @@ export default function ProductDetail(props) {
 
 
     const funct1 = () => {
-
-        console.log('hooo')
 
         return (
             <>
@@ -231,7 +229,7 @@ export default function ProductDetail(props) {
                                                 return (
                                                     <>
                                                         <a href="#" class="item-thumb">
-                                                            <img src={picture.img} style={{ cursor: 'pointer' }} onClick={(e) => { setPic(picture.img) }} alt="IMG-PRODUCT" /> </a>
+                                                            <img src={localImageToLocalTunnelImage(picture.img)} style={{ cursor: 'pointer' }} onClick={(e) => { setPic(picture.img) }} alt="IMG-PRODUCT" /> </a>
                                                     </>
                                                 )
                                             })
