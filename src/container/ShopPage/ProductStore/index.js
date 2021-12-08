@@ -43,10 +43,6 @@ const ProductStore = (props) => {
 			// productDetails={productDetails}
 			/>}
 
-			{
-				console.log(productModal)
-			}
-
 			<div>
 
 				<section class="section-content pt-3">

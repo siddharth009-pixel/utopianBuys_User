@@ -28,8 +28,8 @@ const ContactPage=()=> {
 
         try {
             const token=await getAccessTokenSilently();
-            const  data=await axios.post('http://localhost:2000/api/initialData');
-            console.log(data)
+            // const  data=await axios.post('http://localhost:2000/api/initialData');
+            // console.log(data)
         } catch (error) {
             console.log(error.message)
             

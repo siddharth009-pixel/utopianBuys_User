@@ -28,7 +28,7 @@ function App() {
 
   useEffect(()=>{
     dispatch(getInitialData());
-  },[])
+  },[auth.authenticate])
 
 
   useEffect(() => {

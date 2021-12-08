@@ -53,8 +53,8 @@ export default function Item(props) {
                     <div class="fix-height">
                         <Link to={`/${slug}/${_id}/p`} class="title" >{name}</Link>
                         <div class="price-wrap mt-2">
-                            <span class="price"><i class="fa fa-inr"></i> {price}</span>
-                            <del class="price-old"> <i class="fa fa-inr"></i> {price - 200}</del>
+                            <span class="price"><i class="fa fa-inr"></i> {price-200}</span>
+                            <del class="price-old"> <i class="fa fa-inr"></i> {price}</del>
                         </div>
                     </div>
                     <a onClick={(e) => { e.preventDefault(); addToCartButton() }} class="btn btn-block btn-primary">Add to cart </a>
