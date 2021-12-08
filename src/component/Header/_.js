@@ -4,7 +4,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 const NavBar = props => {
     return (
             <Navbar expand="lg" className=" " >
-            <Navbar.Brand  className="" href="/">Pelagios</Navbar.Brand>
+            <Navbar.Brand  className="" href="/">Utopianbuys</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto ">

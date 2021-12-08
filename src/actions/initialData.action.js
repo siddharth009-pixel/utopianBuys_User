@@ -9,7 +9,7 @@ export const getInitialData = () => {
         // const categories1 = JSON.parse(localStorage.getItem('categories'))
 
 
-        const localCategories = localStorage.getItem('categories')
+        const localCategories = sessionStorage.getItem('categories')
         if (localCategories) {
 
             const categories = JSON.parse(localCategories)
@@ -23,7 +23,7 @@ export const getInitialData = () => {
             if (res.status === 200) {
                 const { categories, products } = res.data;
 
-                localStorage.setItem('categories', JSON.stringify(categories))
+                sessionStorage.setItem('categories', JSON.stringify(categories))
 
                 dispatch({
                     type: categoryConstants.GET_ALL_CATEGORIES_SUCCESS,

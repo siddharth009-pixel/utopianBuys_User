@@ -25,7 +25,7 @@ export default function Item(props) {
         // const img = product.productDetails.productPictures[0].img;
         console.log({ _id, name, price, image })
         dispatch(addToCart({ _id, name, price, img: image }))
-        history.push('/cart')
+        // history.push('/cart')
     }
 
 

@@ -50,7 +50,7 @@ export default function Login(props) {
               <div className="container">
                 <div className="row">
                   <div className="col-lg-10 col-xl-7 mx-auto">
-                    <h3 className="display-4">Pelagios Art</h3>
+                    <h3 className="display-4">Utopianbuys</h3>
                     <p className="text-muted mb-4">Continue with email and password</p>
                     <form>
                       <div className="form-group mb-3">
@@ -113,7 +113,7 @@ export default function Login(props) {
                           </div>
                         </div>
                         <div className="text-center d-flex justify-content-between mt-4">
-                          <p>New to Pelagios? <a style={{ textDecoration: 'underline' }} href="/SignUp">SignUp
+                          <p>New to Utopianbuys? <a style={{ textDecoration: 'underline' }} href="/SignUp">SignUp
                           </a></p>
                         </div></div>
 

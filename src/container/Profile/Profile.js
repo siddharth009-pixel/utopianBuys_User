@@ -70,7 +70,7 @@ export default function Profile(props) {
                         textAlign: 'center',
                         marginLeft: 2.5
                     }}>
-                        <h5>Pelagios Add Or User Photo in Rouded Shape Or Some Other Stuff.</h5>
+                        <h5>Utopianbuys Add Or User Photo in Rouded Shape Or Some Other Stuff.</h5>
                     </div>
                     <div class="row gutters-sm pt-2">
                         <div class="col-md-4 d-none d-md-block ">
