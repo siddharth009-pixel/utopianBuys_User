@@ -12,19 +12,19 @@ export const product=[
         "_id": {
           "$oid": "61ab469768c67b26c418b338"
         },
-        "img": "https://utopianbuys.loca.lt/public/KUnUAWt5a-iphone-13-pro.png"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/KUnUAWt5a-iphone-13-pro.png"
       },
       {
         "_id": {
           "$oid": "61ab469768c67b26c418b339"
         },
-        "img": "https://utopianbuys.loca.lt/public/q24dg6vSbj-iphone-13-pro-01.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/q24dg6vSbj-iphone-13-pro-01.jpg"
       },
       {
         "_id": {
           "$oid": "61ab469768c67b26c418b33a"
         },
-        "img": "https://utopianbuys.loca.lt/public/PVhidfvnGn-Apple-iPhone-13.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/PVhidfvnGn-Apple-iPhone-13.jpg"
       }
     ],
     "quantity": 12,
@@ -56,13 +56,13 @@ export const product=[
         "_id": {
           "$oid": "61ab478568c67b26c418b347"
         },
-        "img": "https://utopianbuys.loca.lt/public/b2xjtL7cG-iPhone-13-Mini01.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/b2xjtL7cG-iPhone-13-Mini01.jpg"
       },
       {
         "_id": {
           "$oid": "61ab478568c67b26c418b348"
         },
-        "img": "https://utopianbuys.loca.lt/public/MtkBal6q02-Apple-iPhone-13.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/MtkBal6q02-Apple-iPhone-13.jpg"
       }
     ],
     "quantity": 13,
@@ -94,13 +94,13 @@ export const product=[
         "_id": {
           "$oid": "61ab47c168c67b26c418b350"
         },
-        "img": "https://utopianbuys.loca.lt/public/b8W-s4Om6-Apple-iPhone-13.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/b8W-s4Om6-Apple-iPhone-13.jpg"
       },
       {
         "_id": {
           "$oid": "61ab47c168c67b26c418b351"
         },
-        "img": "https://utopianbuys.loca.lt/public/tuPWFdLKog-iPhone-13-Mini01.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/tuPWFdLKog-iPhone-13-Mini01.jpg"
       }
     ],
     "quantity": 11,
@@ -132,7 +132,7 @@ export const product=[
         "_id": {
           "$oid": "61ab47ef68c67b26c418b359"
         },
-        "img": "https://utopianbuys.loca.lt/public/yPvBHHVEZ-iphone12 02.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/yPvBHHVEZ-iphone12 02.jpg"
       }
     ],
     "quantity": 8,
@@ -163,13 +163,13 @@ export const product=[
         "_id": {
           "$oid": "61ab481e68c67b26c418b361"
         },
-        "img": "https://utopianbuys.loca.lt/public/HV-LE0cSY-iphone12promax.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/HV-LE0cSY-iphone12promax.jpg"
       },
       {
         "_id": {
           "$oid": "61ab481e68c67b26c418b362"
         },
-        "img": "https://utopianbuys.loca.lt/public/yypzCsHIKz-iPhone-12-Pro-max02jpg.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/yypzCsHIKz-iPhone-12-Pro-max02jpg.jpg"
       }
     ],
     "quantity": 15,
@@ -200,13 +200,13 @@ export const product=[
         "_id": {
           "$oid": "61ab485568c67b26c418b36a"
         },
-        "img": "https://utopianbuys.loca.lt/public/-YbxtQJMH-iphone-11_jpg.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/-YbxtQJMH-iphone-11_jpg.jpg"
       },
       {
         "_id": {
           "$oid": "61ab485568c67b26c418b36b"
         },
-        "img": "https://utopianbuys.loca.lt/public/eQ7R-H-BQ1-iphone11.png"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/eQ7R-H-BQ1-iphone11.png"
       }
     ],
     "quantity": 19,
@@ -237,19 +237,19 @@ export const product=[
         "_id": {
           "$oid": "61ab488768c67b26c418b373"
         },
-        "img": "https://utopianbuys.loca.lt/public/QgrjRKPl--iphone10.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/QgrjRKPl--iphone10.jpg"
       },
       {
         "_id": {
           "$oid": "61ab488768c67b26c418b374"
         },
-        "img": "https://utopianbuys.loca.lt/public/3jZZtNoZS7-iphone10_02.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/3jZZtNoZS7-iphone10_02.jpg"
       },
       {
         "_id": {
           "$oid": "61ab488768c67b26c418b375"
         },
-        "img": "https://utopianbuys.loca.lt/public/vJyiNR4sc--iphone10_03.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/vJyiNR4sc--iphone10_03.jpg"
       }
     ],
     "quantity": 9,
@@ -280,7 +280,7 @@ export const product=[
         "_id": {
           "$oid": "61ab48be68c67b26c418b37d"
         },
-        "img": "https://utopianbuys.loca.lt/public/ikd7JAB_y-iPhoneSE-02.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/ikd7JAB_y-iPhoneSE-02.jpg"
       }
     ],
     "quantity": 12,
@@ -311,13 +311,13 @@ export const product=[
         "_id": {
           "$oid": "61ab48fb68c67b26c418b385"
         },
-        "img": "https://utopianbuys.loca.lt/public/eWl-Yh8JV-iphone6_02.png"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/eWl-Yh8JV-iphone6_02.png"
       },
       {
         "_id": {
           "$oid": "61ab48fb68c67b26c418b386"
         },
-        "img": "https://utopianbuys.loca.lt/public/yvwBle8F4s-iphone6_02.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/yvwBle8F4s-iphone6_02.jpg"
       }
     ],
     "quantity": 15,
@@ -348,13 +348,13 @@ export const product=[
         "_id": {
           "$oid": "61ab492168c67b26c418b38e"
         },
-        "img": "https://utopianbuys.loca.lt/public/Z9OCkn_s9-iphone6s plus.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/Z9OCkn_s9-iphone6s plus.jpg"
       },
       {
         "_id": {
           "$oid": "61ab492168c67b26c418b38f"
         },
-        "img": "https://utopianbuys.loca.lt/public/ghXvP2xihD-iphone6s plus_02.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/ghXvP2xihD-iphone6s plus_02.jpg"
       }
     ],
     "quantity": 12,
@@ -385,19 +385,19 @@ export const product=[
         "_id": {
           "$oid": "61ab518768c67b26c418b3a5"
         },
-        "img": "https://utopianbuys.loca.lt/public/mWXG2FZ0--Samsun_galaxys21_phantom.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/mWXG2FZ0--Samsun_galaxys21_phantom.jpg"
       },
       {
         "_id": {
           "$oid": "61ab518768c67b26c418b3a6"
         },
-        "img": "https://utopianbuys.loca.lt/public/QBbgA2QexA-samsung-galaxy-s21_first.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/QBbgA2QexA-samsung-galaxy-s21_first.jpg"
       },
       {
         "_id": {
           "$oid": "61ab518768c67b26c418b3a7"
         },
-        "img": "https://utopianbuys.loca.lt/public/Cc2FTX43sr-SamsungS21.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/Cc2FTX43sr-SamsungS21.jpg"
       }
     ],
     "quantity": 9,
@@ -428,13 +428,13 @@ export const product=[
         "_id": {
           "$oid": "61ab51e568c67b26c418b3b2"
         },
-        "img": "https://utopianbuys.loca.lt/public/TVEb_nmMb-Samsung-Galaxy-S20-Ultra_First.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/TVEb_nmMb-Samsung-Galaxy-S20-Ultra_First.jpg"
       },
       {
         "_id": {
           "$oid": "61ab51e568c67b26c418b3b3"
         },
-        "img": "https://utopianbuys.loca.lt/public/A-ipCIj7es-Samsung-Galaxy-S20-Ultra.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/A-ipCIj7es-Samsung-Galaxy-S20-Ultra.jpg"
       }
     ],
     "quantity": 12,
@@ -465,19 +465,19 @@ export const product=[
         "_id": {
           "$oid": "61ab523368c67b26c418b3bb"
         },
-        "img": "https://utopianbuys.loca.lt/public/O6vnYyrVK-samsung-galaxy-s21_first.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/O6vnYyrVK-samsung-galaxy-s21_first.jpg"
       },
       {
         "_id": {
           "$oid": "61ab523368c67b26c418b3bc"
         },
-        "img": "https://utopianbuys.loca.lt/public/EzxW5-Rn4f-galaxy-note20.jpg"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/EzxW5-Rn4f-galaxy-note20.jpg"
       },
       {
         "_id": {
           "$oid": "61ab523368c67b26c418b3bd"
         },
-        "img": "https://utopianbuys.loca.lt/public/UDSDde4Z_t-Samsung_Galaxy_Note_20_1.png"
+        "img": "https://utopianbuys.s3.ap-south-1.amazonaws.com/uploads/UDSDde4Z_t-Samsung_Galaxy_Note_20_1.png"
       }
     ],
     "quantity": 19,
