@@ -70,7 +70,7 @@ function Header(props, ref) {
 
               <div class="col-md-2 order-1 order-md-1 col-3" >
                 <Link to='/' >
-                  <img class="logo"  src={`https://utopianbuys.s3.ap-south-1.amazonaws.com/utopianbuysLogo2+(2).PNG`} />
+                  <img class="logo" src={`https://utopianbuys.s3.eu-north-1.amazonaws.com/utopianbuysLogo2+(2).PNG`} />
                 </Link>
               </div>
 
